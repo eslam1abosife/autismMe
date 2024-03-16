@@ -1,0 +1,234 @@
+@font-face {
+    font-family: Abril Fatface;
+    src: url("../style/font/AbrilFatface-Regular.ttf");
+}
+@font-face {
+    font-family: muli;
+    src: url("../style/font/Muli.ttf");
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    font-family: muli !important;
+}
+ul{
+    list-style-type: none;
+}
+/* ^style fixed^ */
+
+header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999999;
+}
+
+/* ^style header^ */
+
+.sec_bg{
+    position: relative;
+    z-index: 10;
+    background-color: #141c26;
+}
+.sec_bg::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    height: 100vh;
+    background:linear-gradient(
+    0deg
+    ,rgba(54, 53, 41, 0.5),
+     rgba(54, 53, 41, 0.5)
+     ),
+    url(../img/bg-contact.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: grayscale(100%);
+    opacity: .3;
+}
+.sec_bg .bg_img .text h2{
+    color: white;
+    font-size: 3.8rem;
+    font-style: normal;
+    font-family: Abril Fatface;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .4px;
+    text-transform: none;
+    margin-bottom: 10px;
+}
+.bg_img .text a{
+    color: white;
+    background-color: #0256c5;
+    vertical-align: middle;
+    text-decoration: none;
+    border:2px solid #0256c5;
+    font-size: 1.05rem;
+    min-height: 50px;
+    padding: 10px 30px;
+    margin: 10px 0;
+    border-radius: 0px;
+    display: inline-block;
+}
+/* ^style bg img^ */
+
+.contact .text li{
+    color: #0256c5;
+    text-transform: capitalize;
+    list-style: none;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-family: Abril Fatface;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: .4px;
+    text-transform: none;
+    margin-bottom: 10px;
+}
+.contact .text li::before{
+    content: '';
+    background-color: #0256c5;
+    display: inline-block;
+    width: 0.75em;
+    height: 0.75em;
+    margin-right: 0.375em;
+}
+.contact .text .one{
+    color: #020305;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-family: Muli;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0px;
+    text-transform: none;
+    margin-bottom: 10px;
+    max-width: 40em;
+}
+.contact .text p{
+    color: #686A6E;
+    font-size: 1.15rem;
+    font-style: normal;
+    font-family: Muli;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+form label{
+    color: #020305;
+    font-size: 0.99rem;
+    font-family: Muli;
+    font-weight: 600;
+    display: block;
+    margin: 0 0 5px;
+}
+form span{
+    color: red;
+    font-style: italic;
+}
+form input, textarea{
+    font-size: 1.15rem;
+    font-family: Muli;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+    border-radius: 0px;
+    border: 2px solid #686A6E;
+    cursor: text;
+    display: block;
+    margin: 0;
+    padding: 8px 10px;
+    width: 100%;
+    outline: 0;
+    background-color: #fff;
+    color: #020305;
+    margin: 20px 0;
+}
+form input:focus{
+    outline-color: #686A6E;
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: solid;
+}
+form textarea{
+    min-height: 60px;
+}
+form button{
+    font-size: 1.1rem;
+    font-style: normal;
+    font-family: Muli;
+    font-weight: 600;
+    text-transform: none;
+    border-radius: 0px;
+    padding: 10px 30px;
+    background-color: #0256c5;
+    border: 2px solid #0256c5;
+    color: white;
+    width: 100%;
+    margin: 10px 0;
+}
+.lastLap{
+    font-weight: 100;
+    word-spacing: 1px;
+}
+.contact .card {
+    background: #f5f5f5;
+    padding: 40px;
+}
+.contact .card h4{
+    font-size: 1.2rem;
+    font-style: normal;
+    font-family: Muli;
+    font-weight: 600;
+    text-transform: none;
+    margin-bottom: 10px;
+}
+.contact .card a{
+    color: #686A6E;
+    margin: 0 8px;
+}
+.contact .card i{
+    color: #686A6E;
+    transition: all .5s;
+}
+.contact .card .d-flex i:hover{
+    color: #0256c5;
+    cursor: pointer;
+}
+/* ^style contact^ */
+
+
+@media (max-width: 400px) {
+    .contact .text li {
+        font-size: 2.1rem;
+    }
+    .sec_bg .bg_img .text h2 {
+        font-size: 2.8rem;
+    }
+    .bg_img .text a {
+        padding: 10px 19px;
+    }
+}
+@media (max-width: 340px){
+    .contact .text li {
+        font-size: 2.0rem;
+    }
+    .contact .text .one{
+        font-size: 1.0rem;
+    }
+    .contact .text p {
+        font-size: .9rem;
+    }
+    .sec_bg .bg_img .text h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ^responsive^ */
